@@ -395,7 +395,7 @@ void loop()
     Serial.println(json);
     // Initializing http client
     HTTPClient httpClient;
-    httpClient.begin("http://54.159.190.199/ping-of-things/sensor_data/");
+    httpClient.begin(SENSOR_DATA_URL);
     httpClient.addHeader("Content-Type", "application/json");
     // Sending the request to the server
     int code  = httpClient.POST(json);
